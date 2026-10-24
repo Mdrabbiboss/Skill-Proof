@@ -52,7 +52,7 @@ class MainActivity:ComponentActivity(){ override fun onCreate(savedInstanceState
  detail!!.skills.forEach{Text("•  $it",modifier=Modifier.fillMaxWidth())}
  Text(detail!!.status,color=Muted);Text("Demo profile only. No independent verification has been performed.",color=Color(0xFF946515),fontSize=12.sp)
  }}
- }else{LazyColumn(Modifier.fillMaxSize().background(Canvas),contentPadding=PaddingValues(18.dp),verticalArrangement=Arrangement.spacedBy(14.dp)){
+ }}else{LazyColumn(Modifier.fillMaxSize().background(Canvas),contentPadding=PaddingValues(18.dp),verticalArrangement=Arrangement.spacedBy(14.dp)){
  item{Row(verticalAlignment=Alignment.CenterVertically){Column(Modifier.weight(1f)){Text("SKILL PROOF",color=Green,fontSize=12.sp,fontWeight=FontWeight.Bold,letterSpacing=2.sp);Text("Hire with confidence.",fontSize=28.sp,fontWeight=FontWeight.Bold);Text("Find skills. Review evidence. Choose wisely.",color=Muted,fontSize=13.sp)};Box(Modifier.size(48.dp).background(Green,RoundedCornerShape(15.dp)),contentAlignment=Alignment.Center){Text("SP",color=Color.White,fontWeight=FontWeight.ExtraBold,fontSize=18.sp)}}}
  item{Card(shape=RoundedCornerShape(22.dp),colors=CardDefaults.cardColors(containerColor=Ink)){Column(Modifier.padding(20.dp),verticalArrangement=Arrangement.spacedBy(8.dp)){Text("GOOD WORK STARTS WITH TRUST",color=Color(0xFF9EE2C5),fontSize=11.sp,fontWeight=FontWeight.Bold,letterSpacing=1.sp);Text("Skills you can explore.",color=Color.White,fontSize=23.sp,fontWeight=FontWeight.Bold);Text("Compare portfolios, ratings and check status before hiring.",color=Color(0xFFD5E1DC))}}}
  item{OutlinedTextField(query,{query=it},Modifier.fillMaxWidth(),placeholder={Text("Search workers or skills")},leadingIcon={Icon(Icons.Default.Search,null)},singleLine=true,shape=RoundedCornerShape(15.dp))}
@@ -66,5 +66,5 @@ class MainActivity:ComponentActivity(){ override fun onCreate(savedInstanceState
  if(data.isEmpty())item{Text("No matches. Try another skill or country.",color=Muted)}
  item{Text("DEMO PROTOTYPE · Sample profiles only. No identity or background checks have been performed.",color=Muted,fontSize=11.sp)}
  }}
- }}
+ }
 }
